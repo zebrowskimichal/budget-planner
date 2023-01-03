@@ -1,4 +1,7 @@
 function save() {
+	date = document.getElementsByName("date")[0].value;
+	shop = document.getElementsByName("shop")[0].value;
+	total = document.getElementsByName("total")[0].value;
 	fetch("insert.php?date=" + date + "&shop=" + shop + "&total=" + total, {
 		method: "get",
 	})
@@ -45,16 +48,20 @@ function shops() {
 		});
 }
 function addShop() {
-	// Get the select element
 	var select = document.getElementsByName("shop")[0];
-	// Create the input element
 	var input = document.createElement("input");
 	input.type = "text";
 	input.id = "shopInput";
-	// Replace the select element with the input element
 	select.parentNode.replaceChild(input, select);
 	shopButton.value = "Add this shop";
-	shopButton.onclick = insertShop(shopInput.value);
+	shopButton.onclick = function () {
+		insertShop(shopInput.value);
+		shopList();
+		shopButton.value = "Add new shop";
+		shopButton.onclick = function () {
+			addShop();
+		};
+	};
 }
 function insertShop(shop) {
 	fetch("insertShop.php?shop=" + shop, {
@@ -68,5 +75,23 @@ function insertShop(shop) {
 		})
 		.then(function (response) {
 			console.log(response);
+		});
+}
+function shopList() {
+	fetch("shops.php", {
+		method: "get",
+	})
+		.then(function (response) {
+			if (response.status >= 200 && response.status < 300) {
+				return response.text();
+			}
+			throw new Error(response.statusText);
+		})
+		.then(function (response) {
+			var data = "<select>" + response + "</select>";
+			var select = document.createElement("select");
+			select.name = "shop";
+			document.getElementById("shopInput").replaceWith(select);
+			select.innerHTML = data;
 		});
 }
