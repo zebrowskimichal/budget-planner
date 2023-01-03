@@ -42,7 +42,8 @@ input[type="date"]:focus {
 	border: 1px solid #3f51b5;
 }
 
-input[type="submit"] {
+input[type="submit"],
+.blue-buttons {
 	background-color: #3f51b5;
 	color: #fff;
 	padding: 12px;
@@ -75,7 +76,6 @@ tr:nth-child(even) {
 	background-color: #f2f2f2;
 }
 select {
-	/* Style the select element */
 	appearance: none;
 	background: white;
 	border: 1px solid #bdbdbd;
@@ -83,22 +83,16 @@ select {
 	box-sizing: border-box;
 	color: #757575;
 	cursor: pointer;
-	display: block;
+	display: inline-block;
 	font-size: 16px;
 	outline: none;
 	padding: 10px;
-	width: 100%;
-
-	/* Style the arrow icon */
-	background-image: url("data:image/svg+xml;utf8,<svg fill='#000000' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-	background-repeat: no-repeat;
-	background-position: right 20px top 50%;
-	background-size: 24px;
+	width: 95%;
 }
-#popup {
-	position: absolute;
-	left: 40%;
-	top: 40%;
-	z-index: +1;
-	backdrop-filter: blur(0);
+#shopButton {
+	min-width: 30px;
+	width: 5%;
+	display: inline-block;
+	position: relative;
+	height: auto;
 }
