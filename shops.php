@@ -4,5 +4,5 @@
     while($answer = mysqli_fetch_assoc($question)){
         echo "<option value='".$answer["shop"]."'>".$answer["shop"]."</option>";
     }
-    echo "<option onclick='createPopup();'>Add new shop</option>";
+    echo "<option selected></option>";
 ?>
