@@ -96,3 +96,11 @@ select {
 	position: relative;
 	height: auto;
 }
+.popup {
+	display: block;
+	position: fixed;
+	z-index: 1;
+}
+#filters {
+	display: none;
+}
