@@ -94,28 +94,4 @@ function shopList() {
 			document.getElementById("shopInput").replaceWith(select);
 			select.innerHTML = data;
 		});
-} /*
-fetch("shops-checkbox.php", {
-	method: "get",
-})
-	.then(function (response) {
-		if (response.status >= 200 && response.status < 300) {
-			return response.text();
-		}
-		throw new Error(response);
-	})
-	.then(function (response) {
-		document.querySelector(".popup").innerHTML = response;
-	});*/
-
-function filters() {
-	var element = document.getElementById("filters");
-	var button = document.getElementById("filter-button");
-	if (element.style.display === "block") {
-		element.style.display = "none";
-		button.value = "Show filters";
-	} else {
-		element.style.display = "block";
-		button.value = "Hide filters";
-	}
 }
