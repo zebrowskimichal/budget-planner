@@ -52,15 +52,25 @@ function addShop() {
 	var input = document.createElement("input");
 	input.type = "text";
 	input.id = "shopInput";
+	input.className = "formInputs";
 	select.parentNode.replaceChild(input, select);
-	shopButton.value = "Add this shop";
+	shopButton.style.marginRight = "1px";
 	shopButton.onclick = function () {
 		insertShop(shopInput.value);
 		shopList();
-		shopButton.value = "Add new shop";
+		shopButton.value = "+";
 		shopButton.onclick = function () {
 			addShop();
 		};
+	};
+	hideButton.style.display = "inline";
+}
+function hideShopAdding() {
+	shopList();
+	hideButton.style.display = "none";
+	shopButton.style.marginRight = "0px";
+	shopButton.onclick = function () {
+		addShop();
 	};
 }
 function insertShop(shop) {
@@ -91,6 +101,7 @@ function shopList() {
 			var data = "<select>" + response + "</select>";
 			var select = document.createElement("select");
 			select.name = "shop";
+			select.className = "shopInput";
 			document.getElementById("shopInput").replaceWith(select);
 			select.innerHTML = data;
 		});
