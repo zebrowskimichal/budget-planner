@@ -2,19 +2,18 @@ body {
 	font-family: "Roboto", sans-serif;
 	background-color: #fafafa;
 }
-
-h1 {
+.formSection {
+	width: 50%;
+	margin: 0 auto;
+}
+.sectionTable {
+	width: 60%;
+	margin: 0 auto;
+}
+/*text-styling*/
+.mainText {
 	text-align: center;
 	color: #3f51b5;
-}
-
-form {
-	max-width: 500px;
-	margin: 0 auto;
-	padding: 16px;
-	box-sizing: border-box;
-	background-color: #fff;
-	border-radius: 4px;
 }
 
 label {
@@ -24,9 +23,16 @@ label {
 	color: #616161;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="date"] {
+.filtersText {
+	margin: 0.5em;
+}
+.checkboxLabel {
+	margin: 0;
+	float: left;
+	display: contents;
+}
+/*selects-formatting*/
+.formInputs {
 	width: 100%;
 	padding: 12px;
 	box-sizing: border-box;
@@ -36,13 +42,32 @@ input[type="date"] {
 	transition: border 0.2s;
 }
 
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="date"]:focus {
+.formInputs:focus {
 	border: 1px solid #3f51b5;
 }
 
-input[type="submit"],
+.shopInput {
+	appearance: none;
+	background: white;
+	border: 1px solid #bdbdbd;
+	border-radius: 2px;
+	box-sizing: border-box;
+	color: #757575;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	outline: none;
+	padding: 10px;
+	width: 95%;
+	box-sizing: border-box;
+}
+/*Hiding filters area*/
+#filters {
+	display: none;
+	width: 60%;
+	margin: 0 auto;
+}
+/*buttons-styling*/
 .blue-buttons {
 	background-color: #3f51b5;
 	color: #fff;
@@ -53,10 +78,20 @@ input[type="submit"],
 	transition: background-color 0.2s;
 }
 
-input[type="submit"]:hover {
+.blue-buttons:hover {
 	background-color: #303f9f;
 }
-
+#hideButton {
+	display: none;
+}
+/*button near Shop-select list*/
+#shopButton {
+	min-width: 30px;
+	width: 5%;
+	display: inline-block;
+	position: relative;
+}
+/*table formatting*/
 table {
 	width: 100%;
 	border-collapse: collapse;
@@ -70,37 +105,4 @@ td {
 
 th {
 	background-color: #e0e0e0;
-}
-
-tr:nth-child(even) {
-	background-color: #f2f2f2;
-}
-select {
-	appearance: none;
-	background: white;
-	border: 1px solid #bdbdbd;
-	border-radius: 2px;
-	box-sizing: border-box;
-	color: #757575;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 16px;
-	outline: none;
-	padding: 10px;
-	width: 95%;
-}
-#shopButton {
-	min-width: 30px;
-	width: 5%;
-	display: inline-block;
-	position: relative;
-	height: auto;
-}
-.popup {
-	display: block;
-	position: fixed;
-	z-index: 1;
-}
-#filters {
-	display: none;
 }
