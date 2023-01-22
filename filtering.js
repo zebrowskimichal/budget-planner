@@ -30,7 +30,7 @@ function filter() {
 		row = "r" + i;
 		valueDate = document.getElementById("d" + i).textContent;
 		valueShop = document.getElementById("s" + i).textContent;
-		valuePrice = document.getElementById("t" + i).textContent;
+		valuePrice = Number(document.getElementById("t" + i).textContent);
 		if (dateStart) {
 			if (valueDate < dateStart) {
 				document.getElementById(row).style.display = "none";

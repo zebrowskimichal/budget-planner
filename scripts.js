@@ -57,8 +57,8 @@ function addShop() {
 	shopButton.style.marginRight = "1px";
 	shopButton.onclick = function () {
 		insertShop(shopInput.value);
-		shopList();
 		shopButton.value = "+";
+		hideShopAdding();
 		shopButton.onclick = function () {
 			addShop();
 		};

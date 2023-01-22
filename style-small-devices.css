@@ -1,0 +1,109 @@
+@media only screen and (max-width: 1024px) {
+	body {
+		font-family: "Roboto", sans-serif;
+		background-color: #fafafa;
+	}
+	.formSection {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.sectionTable {
+		width: 100%;
+		margin: 0 auto;
+	}
+	/*text-styling*/
+	.mainText {
+		text-align: center;
+		color: #3f51b5;
+	}
+
+	label {
+		display: block;
+		margin-bottom: 8px;
+		font-weight: bold;
+		color: #616161;
+	}
+
+	.filtersText {
+		margin: 0.5em;
+	}
+	.checkboxLabel {
+		margin: 0;
+		display: contents;
+	}
+	/*selects-formatting*/
+	.formInputs {
+		width: 100%;
+		padding: 12px;
+		box-sizing: border-box;
+		border: 1px solid #bdbdbd;
+		border-radius: 4px;
+		outline: none;
+		transition: border 0.2s;
+	}
+
+	.formInputs:focus {
+		border: 1px solid #3f51b5;
+	}
+
+	.shopInput {
+		appearance: none;
+		background: white;
+		border: 1px solid #bdbdbd;
+		border-radius: 2px;
+		box-sizing: border-box;
+		color: #757575;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 16px;
+		outline: none;
+		padding: 10px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	/*Hiding filters area*/
+	#filters {
+		display: none;
+		width: 100%;
+		margin: 0 auto;
+	}
+	/*buttons-styling*/
+	.blue-buttons {
+		background-color: #3f51b5;
+		color: #fff;
+		padding: 12px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: background-color 0.2s;
+	}
+
+	.blue-buttons:hover {
+		background-color: #303f9f;
+	}
+	#hideButton {
+		display: none;
+	}
+	/*button near Shop-select list*/
+	#shopButton {
+		min-width: 30px;
+		width: 5%;
+		display: inline-block;
+		position: relative;
+	}
+	/*table formatting*/
+	.table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	th,
+	td {
+		border: 1px solid #bdbdbd;
+		padding: 8px;
+	}
+
+	th {
+		background-color: #e0e0e0;
+	}
+}
