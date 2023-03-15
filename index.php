@@ -20,6 +20,7 @@
                 <input type='submit' value='Save' onclick='save()' class='blue-buttons'>
                 <a href=''><input type='button' value='Refresh data' class='blue-buttons'></a>
                 <input type='button' value='Show fiters' onclick='filters()' class='blue-buttons' id='filter-button'>
+                <input type='button' value='This month' onclick='thisMonth()' class='blue-buttons' id='thisMonth-button'>
                 </br>";
                 include 'shops-checkbox.php';
             echo "</section></br></br>
