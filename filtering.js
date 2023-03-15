@@ -11,7 +11,7 @@ function filters() {
 }
 function filter() {
 	//get date inputs values
-	counter = document.getElementsByClassName("table")[0].rows.length;
+	counter = document.getElementsByClassName("table")[0].rows.length - 1;
 	dateStart = document.getElementsByName("date-start")[0].value;
 	dateEnd = document.getElementsByName("date-end")[0].value;
 	//get checked checkboxes values
@@ -73,4 +73,13 @@ function reset() {
 		filter();
 	};
 	filteringButton.value = "Filter";
+}
+function thisMonth(){
+	const date = new Date();
+	let year = date.getFullYear();
+	var month = ("0" + (date.getMonth() + 1)).slice(-2);
+	let day = '01';
+	document.getElementsByName("date-start")[0].value = year + '-' + month + '-' + day;
+	filter();
+	sumPrice();
 }
