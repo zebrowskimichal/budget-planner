@@ -106,3 +106,13 @@ function shopList() {
 			select.innerHTML = data;
 		});
 }
+function sumPrice(){
+	counter = document.getElementsByClassName("table")[0].rows.length - 1;
+	var x = 0;
+	for (var i = 0; i < counter - 1; i++) {
+		if(document.getElementById("r" + i).style.display != "none"){
+			x += Number(document.getElementById("t" + i).textContent);
+		}
+	}
+	document.getElementById("sum").textContent = x;
+}
