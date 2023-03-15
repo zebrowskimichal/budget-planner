@@ -14,5 +14,8 @@
         echo "</tr>";
         $i++;
     }
+    echo "<tr id='r".$i."'>";
+        echo "<td id='d".$i."'>Sum: </td><td></td><td id='sum'></td>";
+        echo "</tr>";
     echo "</table>"
 ?>
