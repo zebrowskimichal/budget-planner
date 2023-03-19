@@ -57,6 +57,7 @@ function filter() {
 				document.getElementById(row).style.display = "none";
 			}
 		}
+		sumPrice();
 	}
 	//Change filteringButton action and value
 	filteringButton.value = "Reset";
@@ -73,6 +74,7 @@ function reset() {
 		filter();
 	};
 	filteringButton.value = "Filter";
+	sumPrice();
 }
 function thisMonth(){
 	const date = new Date();
